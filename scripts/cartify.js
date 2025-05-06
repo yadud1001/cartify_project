@@ -165,9 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const lastName = lastNameInput.value;
       const contactNum = contactNumInput.value;
       const address = addressInput.value;
-      const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
 
-      if (firstName === "" || lastName === "" || contactNum === "" || address === "" || paymentMethod === "") {
+      if (firstName === "" || lastName === "" || contactNum === "" || address === "") {
         alert("Please fill in all the fields.");
         return;
       }
