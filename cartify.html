@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles/cartify.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <title>Cartify</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-main-container">
+            <div>
+                <h1><span style="color: #007bff">C</span>artify</h1>
+            </div>
+
+            <div class="nav-sub-container">
+                <div class="nav-search-container">
+                    <div class="search-icon-container">
+                        <img src="public/images/icons/search-icon.png" alt="gray search icon" class="search-icon">
+                    </div>
+                    <input placeholder="Search...">
+                </div>
+                
+                <div class="nav-links-container">
+                    <div>
+                        <img src="public/images/icons/dropdown-icon.png" alt="blue dropdown icon" class="nav-icons">
+                        <a href="#">Category</a>
+                    </div>
+
+                    <div>
+                        <img src="public/images/icons/fire-icon.png" alt="blue fire icon" class="nav-icons">
+                        <a href="#">Hot Now</a>
+                    </div>
+
+                    <div>
+                        <img src="public/images/icons/new-icon.png" alt="blue new icon" class="nav-icons">
+                        <a href="#">New In</a>
+                    </div>
+
+                    <div>
+                        <img src="public/images/icons/discount-icon.png" alt="blue discount icon" class="nav-icons">
+                        <a href="#">Sale!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="cart-quantity js-cart-quantity">0</span>
+                <button class="js-cart-icon"><img src="public/images/icons/cart.png" alt="blue cart image" class="cart-icon"></button>
+            </div>
+        </div>
+    </nav>  
+    
+    <main>
+        <div class="js-products-grid"></div>
+    </main>
+
+    <section>
+        <div class="checkout-container">
+            <span class="close">&times;</span>
+
+            <div class="checkout-subcontainer1">
+                <h2><span style="color: #007bff">C</span>heckout</h2>
+
+                <div>
+                    <h3>I. Contact Information</h3>
+
+                    <div>
+                        <label for="first-name">First Name:</label>
+                        <input name="fist-name" id="first-name" type="text" required>
+                    </div>
+
+                    <div>
+                        <label for="last-name">Last Name:</label>
+                        <input name="last-name" id="last-name" type="text" required>
+                    </div>
+
+                    <div>
+                        <label for="contact-num">Contact No.:</label>
+                        <input name="contact-num" id="contact-num" type="number" required>
+                    </div>
+
+                    <div>
+                        <label for="address">Address:</label>
+                        <input name="address" id="address" type="text" required>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>II. Payment Methods</h3>
+
+                    <div class="radio-container">
+                        <div>
+                            <input type="radio" name="payment-method" id="credit-card" value="credit-card" checked>
+                            <label for="credit-card">Credit Card</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="payment-method" id="e-wallet" value="e-wallet">
+                            <label for="e-wallet">E-Wallet</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="payment-method" id="cash-on-delivery" value="cash-on-delivery">
+                            <label for="cash-on-delivery">Cash on Delivery</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-subcontainer2">
+                <div>
+                    <h3>III. Payment Details</h3>
+
+                    <table class="payment-details-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="js-payment-details"></tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">Subtotal:</td>
+                                <td class="js-subtotal"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">Shipping:</td>
+                                <td class="js-shipping-fee"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">Total Payment:</td>
+                                <td class="js-total-payment"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <button id="checkout-button">Checkout</button>
+        </div>
+    </section>
+</body>
+
+<script type="module" src="/scripts/cartify.js"></script>
+</html>
